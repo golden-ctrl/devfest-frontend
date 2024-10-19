@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Sign.css'
+import logo from '../assets/logo.png';
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate(); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic
         console.log("Email:", email);
         console.log("Password:", password);
+        // After successful login, navigate to the dashboard
+        navigate('/dashboard');
     };
 
     return (
         <div className="login-container">
+               <div className="logo-container">
+                 <img src={logo} alt="Logo" /></div>
+                
+                
+        <div className="login-container">
             <div className="login-box">
-                <div className="logo-container">
-                    <img src="https://img.icons8.com/ios-filled/50/4CAF50/n.png" alt="logo" />
-                    <h2>NetWise</h2>
-                </div>
                 <h3>Sign in</h3>
-                <p>Please login to continue to your account.</p>
+                <p>Please sign in to continue to your account.</p>
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label>Email</label>
@@ -53,6 +60,7 @@ const Login = () => {
                     <button type="submit" className="login-btn">Sign in</button>
                 </form>
             </div>
+        </div>
         </div>
     );
 };

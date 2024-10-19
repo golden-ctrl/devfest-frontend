@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./Dashboard.css"
 import "./ChatBot.css";
+import { Link } from 'react-router-dom'
+import profile_pic from '../assets/Vector.png'
+
 
 import Logo from '../assets/logo.svg'
 const ChatBot = () => {
@@ -23,7 +26,7 @@ const ChatBot = () => {
     return (
         <>
             <Navbar />
-            <div className="chatbot-container">
+            <div class="bg-white" className="chatbot-container">
                 <div className="messages-container">
                     {messages.map((msg, index) => (
                         <div key={index} className={`message ${msg.sender}`}>
@@ -53,14 +56,12 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="logo"><img src={Logo}/></div>
             <div className="nav-links">
-                <a href="#dashboard">Dashboard</a>
-                <a href="#analytics">Analytics</a>
-                <a href="#topology">Topology</a>
-                <a href="#chatbot">ChatBot</a>
+            <Link to="/dashboard">Dashboard</Link>
+                <Link to="/analytics">Analytics</Link>
+                <Link to="/topology">Topology</Link>
+                <Link to="/chatBot">ChatBot</Link>
             </div>
-            <div className="profile-icon">
-                <img src="https://via.placeholder.com/40" alt="Profile" className="profile-img" />
-            </div>
+            <div className="profile-icon"><img src={profile_pic}  /></div>
         </nav>
     );
 };

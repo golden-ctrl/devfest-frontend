@@ -1,5 +1,10 @@
 import { useState } from "react";
-import Logo from '../assets/logo.svg'
+import Logo from '../assets/logo-notext.png';
+
+import { Link } from 'react-router-dom'
+import profile_pic from '../assets/Vector.png'
+
+/*import NavBar from '../components/navBar.jsx';*/
 import "./Dashboard.css";
 
 // Sample data for network tracking
@@ -12,6 +17,7 @@ const initialData = [
 
 const Dashboard = () => {
     const [clients, setClients] = useState(initialData);
+     
 
     const handleConnect = (index) => {
         const updatedClients = [...clients];
@@ -37,9 +43,9 @@ const Dashboard = () => {
     return (
         <>
             <Navbar />
-            <div className="dashboard-container">
-                <h1 className="dashboard-title">Network Tracking</h1>
-                <table className="dashboard-table">
+            <div class="bg-white" className="dashboard-container">
+                <div className="title"><h1 className="dashboard-title">Network Tracking</h1></div>
+                <div className="table-color"><table className="dashboard-table">
                     <thead>
                     <tr>
                         <th>Client ID</th>
@@ -67,13 +73,14 @@ const Dashboard = () => {
                                     </button>
                                 )}
                                 <button className="button adjust" onClick={() => handleAdjustBandwidth(index)}>
-                                    Adjust bw
+                                    Adjust Bw
                                 </button>
                             </td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
+                </div>
             </div>
         </>
     );
@@ -83,16 +90,16 @@ const Dashboard = () => {
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="logo"><img src={Logo}/></div>
+            <div className="logo"><img src={Logo} className='logo-img'/></div>
             <div className="nav-links">
-                <a href="#dashboard">Dashboard</a>
-                <a href="#analytics">Analytics</a>
-                <a href="#topology">Topology</a>
-                <a href="#chatbot">ChatBot</a>
+            <Link to="/dashboard">Dashboard</Link>
+                <Link to="/analytics">Analytics</Link>
+                <Link to="/topology">Topology</Link>
+                <Link to="/chatBot">ChatBot</Link>
             </div>
-            <div className="profile-icon">
-                <img src="https://via.placeholder.com/40" alt="Profile" className="profile-img" />
-            </div>
+           
+            <div className="profile-icon"><img src={profile_pic}  /></div>
+           
         </nav>
     );
 };

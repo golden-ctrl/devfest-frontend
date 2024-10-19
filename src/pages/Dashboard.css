@@ -1,4 +1,17 @@
+/*font*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: white; }
+  
+   
+
 /* Navbar Styles */
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -7,16 +20,19 @@
     padding: 10px 20px;
     color: white;
     height: 60px;
+    width: 100%; /* Full width */
+    padding: 0 20px; 
+    
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo-img{
+    width: 60px; 
+    height: auto; 
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 100px;
 }
 
 .nav-links a {
@@ -27,21 +43,24 @@
 }
 
 .nav-links a:hover {
-    color: #00aaff;
+    color: #5ECE96;
 }
 
 .profile-icon {
     cursor: pointer;
-}
-
-.profile-img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    padding: 30px;
+
+    
 }
 
 /* Dashboard Container Styling */
 .dashboard-container {
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
     max-width: 1200px;
     margin: 0 auto 0;
     padding: 20px;
@@ -49,13 +68,14 @@
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Dashboard Title */
 .dashboard-title {
     color: #343a40;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -66,6 +86,7 @@
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
+   
 }
 
 .dashboard-table th,
@@ -102,30 +123,36 @@
 }
 
 .connect {
-    background-color: #28a745;
-    color: white;
+    background-color: white;
+    color: #5ECE96;
+    border: 2px solid #5ECE96;
 }
 
 .connect:hover {
     background-color: #218838;
+    color : white;
 }
 
 .disconnect {
-    background-color: #dc3545;
-    color: white;
+    background-color: white;
+    color: #dc3545;
+    border: 2px solid #dc3545;
 }
 
 .disconnect:hover {
     background-color: #c82333;
-}
-
-.adjust {
-    background-color: #007bff;
     color: white;
 }
 
+.adjust {
+    background-color:white;
+    color: #030E2A;
+    border: 2px solid #030E2A; 
+}
+
 .adjust:hover {
-    background-color: #0056b3;
+    background-color: #030E2A;
+    color: white;
 }
 
 .user-icon {
@@ -192,3 +219,12 @@
     border: none;
     cursor: pointer;
 }
+.titel{
+    background-color: white;
+}
+.tableColor{
+    background-color: #E5E5E5;
+    width: 100%;
+}
+
+

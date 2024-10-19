@@ -2,6 +2,8 @@ import Logo from "../assets/logo.svg";
 import './Dashboard.css'
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { Link } from 'react-router-dom'
+import profile_pic from '../assets/Vector.png'
 const Analytics = ()=>{
     const data = {
         labels: ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm'],
@@ -58,14 +60,14 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="logo"><img src={Logo}/></div>
             <div className="nav-links">
-                <a href="#dashboard">Dashboard</a>
-                <a href="#analytics">Analytics</a>
-                <a href="#topology">Topology</a>
-                <a href="#chatbot">ChatBot</a>
+            <Link to="/dashboard">Dashboard</Link>
+                <Link to="/analytics">Analytics</Link>
+                <Link to="/topology">Topology</Link>
+                <Link to="/chatBot">ChatBot</Link>
             </div>
-            <div className="profile-icon">
-                <img src="https://via.placeholder.com/40" alt="Profile" className="profile-img"/>
-            </div>
+            
+            <div className="profile-icon"><img src={profile_pic}  /></div>
+            
         </nav>
     );
 };
