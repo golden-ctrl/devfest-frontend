@@ -3,6 +3,7 @@ import "./Dashboard.css"
 import "./ChatBot.css";
 import { Link } from 'react-router-dom'
 import profile_pic from '../assets/Vector.png'
+import log from "../assets/logo_blue.png"
 
 
 import Logo from '../assets/logo.svg'
@@ -30,7 +31,7 @@ const ChatBot = () => {
                 <div className="messages-container">
                     {messages.map((msg, index) => (
                         <div key={index} className={`message ${msg.sender}`}>
-                            <div className="logo-placeholder">NW</div>
+                            <div className="logo-placeholder"><img src={log}/></div>
                             <p>{msg.text}</p>
                         </div>
                     ))}

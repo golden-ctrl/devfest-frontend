@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Logo from '../assets/logo-notext.png';
+import { NavLink } from 'react-router-dom';
 
-import { Link } from 'react-router-dom'
+
+
 import profile_pic from '../assets/Vector.png'
 
 /*import NavBar from '../components/navBar.jsx';*/
@@ -12,8 +14,15 @@ const initialData = [
     { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
     { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
     { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
+    { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
+    { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
+    { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
+    { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
+    { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
+    { clientId: "4736829", time: "8:00 pm", requestedBw: "15 Mb/s", allocatedBw: "20 Mb/s", connected: true },
     // Add more data entries as needed
 ];
+
 
 const Dashboard = () => {
     const [clients, setClients] = useState(initialData);
@@ -43,7 +52,7 @@ const Dashboard = () => {
     return (
         <>
             <Navbar />
-            <div class="bg-white" className="dashboard-container">
+            <div class="bg-white" className="dashboard-container" style={{width:"100%",height:"100%"}}>
                 <div className="title"><h1 className="dashboard-title">Network Tracking</h1></div>
                 <div className="table-color"><table className="dashboard-table">
                     <thead>
@@ -90,16 +99,34 @@ const Dashboard = () => {
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="logo"><img src={Logo} className='logo-img'/></div>
+            <div className="logo"><img src={Logo} className='logo-img' /></div>
             <div className="nav-links">
-            <Link to="/dashboard">Dashboard</Link>
-                <Link to="/analytics">Analytics</Link>
-                <Link to="/topology">Topology</Link>
-                <Link to="/chatBot">ChatBot</Link>
+                <NavLink
+                    to="/dashboard"
+                    className={({ isActive }) => isActive ? 'active-link' : ''}
+                >
+                    Dashboard
+                </NavLink>
+                <NavLink
+                    to="/analytics"
+                    className={({ isActive }) => isActive ? 'active-link' : ''}
+                >
+                    Analytics
+                </NavLink>
+                <NavLink
+                    to="/topology"
+                    className={({ isActive }) => isActive ? 'active-link' : ''}
+                >
+                    Topology
+                </NavLink>
+                <NavLink
+                    to="/chatBot"
+                    className={({ isActive }) => isActive ? 'active-link' : ''}
+                >
+                    ChatBot
+                </NavLink>
             </div>
-           
-            <div className="profile-icon"><img src={profile_pic}  /></div>
-           
+            <div className="profile-icon"><img src={profile_pic} /></div>
         </nav>
     );
 };

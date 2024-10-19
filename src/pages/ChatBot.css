@@ -100,6 +100,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin :30px;
 
 }
 
@@ -108,3 +109,9 @@ body {
     background-color: #5ECE96;
 }
 
+
+.logo-placeholder img {
+    width: 50px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image fits nicely within its container */
+}
