@@ -19,6 +19,7 @@ const Login = () => {
     };
 
     return (
+        <div className='signin_page'>
         <div className="login-container">
                <div className="logo-container">
                  <img src={logo} alt="Logo" /></div>
@@ -60,6 +61,7 @@ const Login = () => {
                     <button type="submit" className="login-btn">Sign in</button>
                 </form>
             </div>
+        </div>
         </div>
         </div>
     );
