@@ -52,8 +52,8 @@ const Dashboard = () => {
     return (
         <>
             <Navbar />
-            <div class="bg-white" className="dashboard-container" style={{width:"100%",height:"100%"}}>
-                <div className="title"><h1 className="dashboard-title">Network Tracking</h1></div>
+            <div class="bg-white w-full " className="dashboard-container" >
+                <div className="title" ><h1 className="dashboard-title" style={{color:"white"}}>Network Tracking</h1></div>
                 <div className="table-color"><table className="dashboard-table">
                     <thead>
                     <tr>

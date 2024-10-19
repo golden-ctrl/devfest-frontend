@@ -55,7 +55,7 @@ const Analytics = () => {
                         <button className="tab-btn">Network Performance</button>
                     </div>
 
-                    <div className="graph-section" >
+                    <div className="graph-section" class='bg-white bg-center w-full' >
                         <h3>Graph description</h3>
                         <p style={{color :"white"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.</p>
